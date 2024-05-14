@@ -1,0 +1,327 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #020004;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Hace que el fondo permanezca fijo durante el desplazamiento */
+    
+}
+
+#videoFondo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Mantiene el video detrás de todo el contenido */
+    background-size: cover; /* Asegura que el video cubra el área disponible */
+}
+#initialBackground {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Fondo oscurecido */
+    z-index: 999; /* Asegura que esté sobre el contenido de la landing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ageConfirmation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#ageConfirmation div {
+    background: #333; /* Gris oscuro para el fondo del cuadro */
+    padding: 20px;
+    color: white;
+    border-radius: 8px; /* Bordes redondeados para el cuadro */
+    text-align: center;
+}
+
+#ageConfirmation div button {
+    border: none;
+    padding: 10px 20px;
+    margin: 5px; /* Espacio alrededor de los botones */
+    border-radius: 5px; /* Bordes redondeados para los botones */
+    color: white; /* Texto blanco para ambos botones */
+    font-weight: bold;
+    font-size: 16px; /* Un tamaño de fuente más grande para mejorar la legibilidad */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre los botones */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+#confirmAge {
+    background-color: #4CAF50; /* Botón "Sí" en dorado */ 
+}
+
+#confirmAge:hover {
+    background-color: #b8860b; /* Un dorado más oscuro al pasar el mouse */
+}
+
+#denyAge {
+    background-color: #757575; /* Botón "No" en gris oscuro para coincidir con el cuadro */
+}
+
+#denyAge:hover {
+    background-color: #555; /* Un gris más claro al pasar el mouse */
+}
+
+
+h1, h2{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+header {
+    position: relative; /* O 'fixed', dependiendo de tu diseño */
+    z-index: 10; /* Asegura que el header esté sobre otros elementos */
+    background-color: #141414;
+    color: white;
+    margin-top: -10px;
+    padding: 10px 0;
+    display: block;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Alinea los elementos verticalmente */
+    gap: 20px; /* Espacio entre los botones */
+    padding: 20px; /* Añade un poco de padding alrededor de los botones para una mejor visualización */
+}
+
+.whatsapp-button {
+    position: fixed; /* Mantiene el botón fijo en la pantalla */
+    bottom: 0; /* Posición en la parte inferior de la pantalla */
+    left: 0; /* Alinea el botón al lado izquierdo de la pantalla */
+    width: 100%; /* El botón ocupa el 100% del ancho de la pantalla */
+    background-color: black; /* Color de fondo de WhatsApp */
+    border-top: 2px solid #f73d65; /* Borde superior dorado */
+    color: white; /* Color del texto */
+    text-align: center; /* Alinea el texto al centro */
+    padding: 15px 0; /* Añade padding vertical para mayor visibilidad del texto */
+    font-size: 20px; /* Aumenta el tamaño del texto para mejorar la legibilidad */
+    z-index: 1000; /* Asegura que el botón se muestre por encima de otros elementos */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    display: flex; /* Utiliza flexbox para alinear ícono y texto */
+    justify-content: center; /* Centra los elementos horizontalmente dentro del botón */
+    align-items: center; /* Centra los elementos verticalmente dentro del botón */
+    animation: grow-shrink 2s infinite;
+}
+
+.whatsapp-button img {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    width: 35px; /* Tamaño del ícono de WhatsApp */
+    height: auto; /* Mantiene la proporción del ícono */
+}
+
+
+.casino-logo {
+    max-width: 60%; /* Asegura que la imagen sea responsiva */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Hace que la imagen se centre si ajustas los márgenes automáticamente */
+    margin: 0 auto; /* Centra la imagen horizontalmente. Ajusta el margen superior según necesites */
+    margin-top: 0px;
+    margin-bottom: 140px; /* Ajusta este valor para subir la imagen según tus necesidades */
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Asegura que la imagen no afecte el flujo de los elementos siguientes */
+    margin: 0 auto; /* Centra la imagen */
+}
+
+h2 {
+    color: #fff; /* Cambia el color según tu diseño */
+    text-align: center; /* Centra el texto */
+    margin-top: -120px; /* Espacio después de la imagen */
+    margin-bottom: 100;
+    font-size: 34px;
+}
+
+
+.info-texts {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr); /* Crea tres columnas de igual ancho */
+    gap: 60px; /* Espacio entre columnas y filas */
+    max-width: 300px; /* O el ancho máximo que prefieras */
+    margin: auto; /* Centra el contenedor en su contenedor padre */
+    margin-top: 65px;
+}
+
+.info-texts span {
+    color: #fff; /* Mantén tu estilo de color */
+    font-size: 32px; /* Ajusta el tamaño de fuente según necesites */
+    text-align: center; /* Centra el texto */
+}
+
+.info-texts .highlight {
+    color: #f73d65; /* Cambia esto por el código de color dorado exacto que prefieras */
+    display: block; /* Esto hace que cada span se comporte como un bloque y aparezca en su propia línea */
+    margin-top: 15px; /* Agrega espacio arriba */
+    margin-bottom: 5px; /* Agrega espacio abajo */
+    font-weight: bold;
+    font-size: 46px; /* Ajusta el tamaño de fuente según necesites */
+
+    /* Mantén el resto de tus estilos para .highlight */
+}
+
+
+.info-texts .small-text {
+    display: block; /* Esto hace que cada span se comporte como un bloque y aparezca en su propia línea */
+
+    font-size: 0.5em; /* Ajusta esto según el tamaño que prefieras */
+}
+
+#intro {
+    background-color: #f2f2f2; /* Color de fondo ligero */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+#section-intro h2 {
+    color: #f2f2f2; /* Color del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-size: 42;
+}
+
+#intro p {
+    color: #666; /* Color del párrafo */
+    font-size: 1.1em; /* Tamaño del texto */
+}
+
+
+.msjusuario {
+    color: white; /* Cambia el color de la letra a blanco */
+    font-size: 32px; /* Cambia el tamaño de la fuente. Ajusta según necesites */
+    position: relative; /* Permite mover el span respecto a su posición actual */
+    bottom: -50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.casino-logo-round {
+    display: block; /* Hace que la imagen se pueda centrar con margin auto */
+    margin: 100px auto; /* Añade espacio arriba/abajo y centra horizontalmente */
+    height: 400px; /* Define la altura para mantener la imagen como un cuadrado */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+.casino-logito {
+    display: block; /* Hace que la imagen se pueda centrar con margin auto */
+    margin: 50px auto; /* Añade espacio arriba/abajo y centra horizontalmente */
+    margin-top:10;
+    height: 250px; /* Define la altura para mantener la imagen como un cuadrado */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+.licence {
+    color: white; /* Cambia el color de la letra a blanco */
+    font-size: 11px; /* Cambia el tamaño de la fuente. Ajusta según necesites */
+    position: relative; /* Permite mover el span respecto a su posición actual */
+    bottom: 30px; /* Sube el span hacia arriba. Ajusta este valor según necesites */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+}
+
+@keyframes grow-shrink {
+    0%, 100% {
+        transform: scale(1); /* Estado original */
+    }
+    50% {
+        transform: scale(1.1); /* Agrandar un 10% */
+    }
+}
+
+.text-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Gris oscuro semitransparente */
+    color: white; /* Texto en color blanco para contraste */
+    padding: 20px; /* Espaciado interno para que el texto no toque los bordes */
+    margin-bottom: 20px; /* Espaciado entre contenedores, si es necesario */
+    border-radius: 10px; /* Bordes redondeados para un aspecto más suave */
+}
+
+
+@media (max-width: 600px) {
+    header {
+        padding: 20px 0; /* Reduce el padding para disminuir la altura del header */
+    }
+    header h1, header nav a {
+        font-size: 16px; /* Disminuye el tamaño del texto para ahorrar espacio */
+    }
+
+    .casino-logo {
+        max-width: 95%;
+        margin-top: -15px; /* Elimina el margen negativo en dispositivos móviles */
+    }
+
+    h2 {
+        font-size: 24px; /* Reduce el tamaño de la fuente en dispositivos móviles */
+        margin-top: -150px; /* Asegura suficiente espacio arriba del h2 */
+        margin-bottom: 20px;
+    }
+
+    /* Ajusta el tamaño del texto "Carga mínima" */
+    .info-texts > span {
+        font-size: 22px; /* O el tamaño que prefieras */
+        margin-top: 20px;
+    }
+
+    .info-texts .highlight {
+        font-size: 28px; /* Reduce el tamaño de la fuente para los números dorados */
+        margin-top: 15px; /* Ajusta el margen superior si es necesario */
+        margin-bottom: 5px; /* Ajusta el margen inferior si es necesario */
+    }
+
+    .info-texts .small-text {
+        font-size: 16px; /* Reduce el tamaño para el texto más pequeño */
+    }
+
+    .msjusuario {
+        font-size: 22px; /* Cambia el tamaño de la fuente. Ajusta según necesites */
+        bottom: -32px;
+    }
+
+    .casino-logo-round {
+        width: 435px; /* Define el ancho deseado */
+        height: 235px; /* Define la altura para mantener la imagen como un cuadrado */
+        margin: 45px auto; /* Añade espacio arriba/abajo y centra horizontalmente */
+
+    }
+    .casino-logito {
+        display: block; /* Hace que la imagen se pueda centrar con margin auto */
+        margin: 50px auto; /* Añade espacio arriba/abajo y centra horizontalmente */
+        margin-top: -10;
+        height: 50px; /* Define la altura para mantener la imagen como un cuadrado */
+        object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    }
+
+    .whatsapp-button {
+        padding: 15px 0; /* Duplica el padding vertical para aumentar la altura */
+        font-size: 20px; /* Opcional: Aumenta el tamaño del texto si lo deseas más grande */
+    }
+
+    .whatsapp-button img {
+        width: 35px; /* Duplica el tamaño del logo de WhatsApp */
+        height: auto; /* Mantiene la proporción del ícono */
+    }
+}
